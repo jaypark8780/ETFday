@@ -1,0 +1,15 @@
+node_modules/
+.gencow/
+*.log
+.env
+dist/
+dist2/
+src/gencow/api.ts
+src/gencow/db.d.ts
+src/gencow/operations.d.ts
+src/gencow/zod.ts
+gencow/api.ts
+gencow/db.d.ts
+gencow/operations.d.ts
+gencow/zod.ts
+gencow/README.md

@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #2563eb;
+    --color-urgent: #dc2626;
+    --color-warning: #ea580c;
+    --color-notice: #ca8a04;
+}
+
+html {
+    font-family:
+        "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+        system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+        "Noto Sans KR", sans-serif;
+}
+
+body {
+    @apply bg-gray-50 text-gray-900;
+}
+
+.tabular {
+    font-variant-numeric: tabular-nums;
+}
