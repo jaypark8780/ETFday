@@ -117,7 +117,7 @@ export default function Calendar() {
                             <button
                                 key={date}
                                 onClick={() => setSelected(date)}
-                                className={`relative aspect-square border border-gray-50 p-1 text-left text-xs transition ${
+                                className={`relative aspect-square lg:min-h-24 border border-gray-50 p-1 text-left text-xs transition ${
                                     holiday ? "bg-gray-100" : ""
                                 } ${selected === date ? "ring-2 ring-blue-500 ring-inset" : ""} ${
                                     isPast ? "opacity-40" : ""
@@ -145,7 +145,7 @@ export default function Calendar() {
             {isLoading && <p className="py-4 text-center text-sm text-gray-400">불러오는 중…</p>}
 
             {selected && (
-                <section>
+                <section className="lg:mt-6">
                     <h2 className="mb-2 text-sm font-semibold text-gray-700">
                         {formatDateKR(selected)}
                         {holidayMap.has(selected) && (

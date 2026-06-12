@@ -26,9 +26,9 @@ export default function Search() {
     const results = (data as any)?.data ?? [];
 
     return (
-        <div className="space-y-4">
+        <div className="space-y-4 lg:mx-auto lg:max-w-2xl">
             <div className="flex items-center gap-2">
-                <button onClick={() => navigate(-1)} className="p-2 text-gray-500">
+                <button onClick={() => navigate(-1)} className="p-2 text-gray-500 lg:hidden">
                     ←
                 </button>
                 <input

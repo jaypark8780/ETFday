@@ -65,7 +65,7 @@ export default function Home() {
             </div>
 
             {isLoading && (
-                <div className="space-y-3">
+                <div className="grid gap-3 lg:grid-cols-2">
                     <CardSkeleton />
                     <CardSkeleton />
                     <CardSkeleton />
@@ -75,7 +75,7 @@ export default function Home() {
             {!isLoading && todayItems.length > 0 && (
                 <section>
                     <h2 className="mb-2 font-bold text-red-600">⏰ 오늘 마감</h2>
-                    <div className="space-y-3">
+                    <div className="grid gap-3 lg:grid-cols-2">
                         {todayItems.map((i) => (
                             <EtfCard key={`${i.etf.id}-${i.deadlineKST}`} item={i} />
                         ))}
@@ -86,7 +86,7 @@ export default function Home() {
             {!isLoading && weekItems.length > 0 && (
                 <section>
                     <h2 className="mb-2 font-bold text-gray-800">📌 이번 주 마감</h2>
-                    <div className="space-y-3">
+                    <div className="grid gap-3 lg:grid-cols-2">
                         {weekItems.map((i) => (
                             <EtfCard key={`${i.etf.id}-${i.deadlineKST}`} item={i} />
                         ))}
@@ -97,7 +97,7 @@ export default function Home() {
             {!isLoading && laterItems.length > 0 && (
                 <section>
                     <h2 className="mb-2 font-bold text-gray-800">다가오는 마감</h2>
-                    <div className="space-y-3">
+                    <div className="grid gap-3 lg:grid-cols-2">
                         {laterItems.map((i) => (
                             <EtfCard key={`${i.etf.id}-${i.deadlineKST}`} item={i} />
                         ))}

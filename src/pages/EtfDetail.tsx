@@ -36,7 +36,7 @@ function DeadlineHero({ next }: { next: any }) {
     const days = daysLeft(next.deadlineKST);
     return (
         <div className={`rounded-2xl p-5 text-white ${urgencyBg(days)}`}>
-            <p className="text-center text-3xl font-extrabold tabular">{ddayLabel(days)}</p>
+            <p className="text-center text-3xl font-extrabold tabular lg:text-6xl">{ddayLabel(days)}</p>
             <p className="mt-1 text-center text-sm opacity-90 tabular" aria-live="polite">
                 {remainingLabel(next.deadlineKST, now)} 남음
             </p>
@@ -132,7 +132,7 @@ export default function EtfDetail() {
     const { etf, next, history } = detail;
 
     return (
-        <div className="space-y-5">
+        <div className="space-y-5 lg:mx-auto lg:max-w-3xl">
             <div className="flex items-center gap-2">
                 <button onClick={() => navigate(-1)} className="p-2 text-gray-500">
                     ←

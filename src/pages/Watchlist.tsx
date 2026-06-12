@@ -96,7 +96,7 @@ function MyList() {
             {user?.email && <p className="text-xs text-gray-400">{user.email}</p>}
 
             {isLoading && (
-                <div className="space-y-3">
+                <div className="grid gap-3 lg:grid-cols-2">
                     <CardSkeleton />
                     <CardSkeleton />
                 </div>
@@ -110,7 +110,7 @@ function MyList() {
                 />
             )}
 
-            <div className="space-y-3">
+            <div className="grid gap-3 lg:grid-cols-2">
                 {items.map((item) => (
                     <div key={item.etf.id} className="relative">
                         <EtfCard item={item} />
